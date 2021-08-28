@@ -1,14 +1,107 @@
 /* ========BASIC SETUP =========== */
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
     font-family: 'Titillium Web', sans-serif;
 
 }
 
-.box1{
-    background-color: aqua;
+ul li{
+    list-style-type: none;
+}
+h1{
+    font-size: 42px;
+    color: #fff;
 }
 
-.box2{
-    background: brown;
+/* ========REUSEABLE COMPONENT =========== */
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.btn:link,
+.btn:visited,
+.btn{
+    background: #333;
+    border-bottom: 3px solid #000;
+    color:#fff ;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 60px ;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 45px;
+}
+
+/* ========HEADER SECTION =========== */
+header{
+    background:linear-gradient(rgba(135,80,156,.9), rgba(135,80,156,.9)) ,url(img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 85vh;
+    position: relative;
+}
+
+.logo{
+    height: 35px;
+    width: auto;
+    margin-top: 35px;
+    float: left;
+}
+
+/*  MAIN NAVIGATION */
+.main-nave{
+    float: right;
+    margin-top: 40px;
+}
+.main-nave li{
+    display: inline-block;
+    margin-left: 10px;
+
+}
+.main-nave li:first-child{
+    margin-left: 0px;
+}
+.main-nave li a:link,
+.main-nave li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(100, 58, 121,0);
+    padding: 4px 16px;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 16px;
+
+
+}
+
+.main-nave li:hover a:link,
+.main-nave li:hover a:visited{
+    background: rgb(100, 58, 121,1);
+    transition: .3s;
+
+}
+.main-nave li.active a{
+    background: rgb(100, 58, 121,1);
+  
+}
+
+.hero-text-box{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+
+}
+.btn-hero:link,
+.btn-hero:visited{
+    background-color: #eb7d4b;
+    border-color: #c86a40;
 }
